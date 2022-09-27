@@ -24,6 +24,10 @@ public class OrderHystrixMain80 {
         System.out.println("http://"+ip+":"+prot);
         ///就是看点击反馈数据库
         System.out.println("是佛挡杀佛");
+        System.out.println("是佛挡杀佛");
+        System.out.println("是佛挡杀佛");
+        System.out.println("是佛挡杀佛");
+        System.out.println("是佛挡杀佛");
     }
 
 }
