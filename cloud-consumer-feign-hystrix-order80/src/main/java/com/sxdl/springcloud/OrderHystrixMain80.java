@@ -22,6 +22,8 @@ public class OrderHystrixMain80 {
         InetAddress inetAddress=InetAddress.getLocalHost();
         String ip=inetAddress.getHostAddress();//获得本机Ip
         System.out.println("http://"+ip+":"+prot);
+
+        System.out.println("我是test分支");
     }
 
 }
