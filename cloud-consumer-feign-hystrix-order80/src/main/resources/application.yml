@@ -1,0 +1,49 @@
+server:
+  port: 8003
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+
+
+mybatis-plus:
+  configuration:
+    ## 显示sql语句
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    ##特殊情况下，查询结果返回List<Map>格式，会自动将查询结果为null的字段忽略，加入该配置
+    call-setters-on-nulls: true
+
+
+#开启
+feign:
+  hystrix:
+    enabled: true
+#下面两个设置 用来设置hystrix 中的 @FeignClient 超时1秒后直接进入 fallback 中
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+
+
+
+
+logging:
+  level:
+    # feign日志以什么级别监控哪个接口
+    com.lun.springcloud.service.PaymentFeignService: debug
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
+    url: jdbc:mysql://localhost:3306/springcloud2022?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+
