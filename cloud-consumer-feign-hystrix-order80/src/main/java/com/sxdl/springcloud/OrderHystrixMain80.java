@@ -24,6 +24,7 @@ public class OrderHystrixMain80 {
         System.out.println("http://"+ip+":"+prot);
 
         System.out.println("我是test分支");
+        System.out.println("我是test分支222");
     }
 
 }
